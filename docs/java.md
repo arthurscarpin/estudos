@@ -56,6 +56,8 @@
   - [12.8. Classe Abstrata](#128-classe-abstrata)
   - [12.9. Métodos Abstratos](#129-métodos-abstratos)
   - [12.10. Interface](#1210-interface)
+- [13. Record](#13-record)
+- [14. Enum](#14-enum)
 <!-- /TOC -->
 
 ## 1 Variáveis
@@ -1098,3 +1100,29 @@ public class Gerente extends Funcionario implements Aprovador { // Implementa a 
 > Diferente de um método abstrato que obriga que todas as subclasses implementem o método, com uma interface é possível implementar esse contrato para subclasses específicas.
 
 > É possível implementar várias interfaces em uma classe.
+
+---
+
+## 13. Record
+É um recurso que permite representar uma classe imutável, contendo apenas atributos, construtor e métodos de leitura, de uma maneira simples e enxuta.
+
+Record
+```java
+public record DadosCadastroMedico(String nome, String email, String crm, Especialidade especialidade, DadosEndereco endereco) {
+}
+```
+
+---
+
+## 14. Enum
+É uma abreviação de `Enumeration`, que é um tipo especial de classe que representa um conjunto fixo e limitado de constantes. Ele é utilizado quando se deseja modelar valores que são logicamente relacionados e imutáveis, como dias da semana, estados de um processo, ou tipos de usuário.
+
+Enum
+```java
+public enum Especialidade {
+    ORTOPEDIA,
+    CARDIOLOGIA,
+    GENECOLOGIA,
+    DERMATOLOGIA;
+}
+```
